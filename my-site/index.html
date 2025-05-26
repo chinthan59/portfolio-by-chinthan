@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chinthan K M | Data Analyst Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      background-color: #000;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      font-size: 25px;
+      font-weight:bold
+    }
+
+    body {
+      padding-top: 56px; /* height of navbar */
+      background-color: rgba(0, 0, 0,0.94);
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #ffc107 !important;
+    }
+    .nav-link {
+      color: #ffc107 !important;
+      cursor: pointer;
+    }
+    .nav-link:hover, .nav-link.active {
+      text-decoration: underline;
+    }
+
+    /* Hero Section */
+    #home {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      z-index: 1;
+      padding-top: 76px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    #home::before {
+      content: '';
+      position: absolute;
+      top: 56px; left: 0;
+      height: calc(100vh - 56px);
+      width: 100%;
+      background-color: rgb(0, 0, 0);
+      border-radius: 10px;
+      z-index: -1;
+    }
+    #home h1 {
+      font-size: 3.2rem;
+      font-weight: bold;
+      color: #ffc107;
+      text-shadow: 2px 2px 10px #000;
+    }
+    #home p {
+      font-size: 1.3rem;
+      color: #e0e0e0;
+    }
+    .btn-warning {
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px #ffc107;
+    }
+    .btn-warning:hover {
+      background-color: #ffcc00;
+      color: #000;
+      box-shadow: 0 0 20px #ffd633;
+    }
+
+    /* Sections */
+    section {
+      padding: 60px 20px;
+      max-width: 960px;
+      margin: auto;
+    }
+    section h2 {
+      color: #ffc107;
+      margin-bottom: 30px;
+    }
+
+    /* About Section */
+    #about p {
+      font-size: 20px;
+    }
+
+    /* Projects Cards */
+    .card {
+      background-color: #2c2c2c;
+      border: solid 1px yellow;
+      border-radius: 10;
+      color: #fff;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    /* Contact Form */
+    label {
+      color: #ccc;
+    }
+    .form-control {
+      background-color: #2c2c2c;
+      border: none;
+      color: white;
+    }
+    .form-control::placeholder {
+      color: #999;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000;
+      color: #aaa;
+      margin-top: 40px;
+    }
+
+    /* Responsive Navbar padding fix */
+    body {
+      padding-top: 56px;
+    }
+    .social-icons {
+      margin:top 60px; /* space below button, pushes icons lower */
+      display: flex;
+      justify-content: center;
+      gap: 2rem; /* spacing between icons */
+    }
+
+    .social-icons a.icon {
+      color: #ffc107; /* your theme yellow */
+      font-size: 1.8rem;
+      text-decoration: none; /* remove underline */
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a.icon:hover {
+      color: #ffdd57; /* lighter yellow on hover */
+    }
+    #about h2 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#home" style="font-size: larger;">Chinthan K M</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Home / Hero Section -->
+  <section id="home" class="animate__animated animate__fadeIn">
+    <h1 class="animate__animated animate__zoomIn">Welcome to Chinthan's Portfolio</h1>
+    <p class="animate__animated animate__fadeInUp animate__delay-1s">Aspiring Data Analyst | Python | SQL | Anime Enthusiast</p>
+    <a href="#about" class="btn btn-warning mt-4 animate__animated animate__fadeInUp animate__delay-2s">Explore More</a>
+    <!-- Social Media Icons -->
+    <div class="social-icons mt-5 animate__animated animate__fadeInUp animate__delay-3s">
+      <a href="https://twitter.com/yourusername" target="_blank" class="icon">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://github.com/yourusername" target="_blank" class="icon">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://instagram.com/yourusername" target="_blank" class="icon">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="mailto:yourmail@example.com" target="_blank" class="icon">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="animate__animated animate__fadeInDown">
+    <h2><b>About Me</b></h2>
+    <p>I'm <strong>Chinthan K M</strong>, an aspiring Data Analyst with a passion for turning raw data into actionable insights using tools like Python, SQL, Power BI, and Tableau. I'm currently pursuing my MCA at PES University and have previously interned at NullClass where I built real-world analytical dashboards and reports.</p>
+    <p>I enjoy combining my logical mindset with creativity—both in data analysis and in my love for anime. Whether it's debugging code or binge-watching One Piece, I believe in learning with passion and consistency.</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="animate__animated animate__fadeInDown">
+    <h2><b>My Projects</b></h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card p-3">
+          <h5>Currency Recognition ML App</h5>
+          <p>Built a machine learning model using OpenCV and TensorFlow to classify currencies and convert them to INR.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card p-3">
+          <h5>Jarves Voice Assistant</h5>
+          <p>Python-based desktop assistant with speech-to-text, NLP interpretation, and automated response execution.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card p-3">
+          <h5>Instagram User Analytics</h5>
+          <p>Performed EDA on follower and engagement data using Excel and MySQL to identify growth patterns.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card p-3">
+          <h5>IMDB Movie Analytics</h5>
+          <p>Analyzed genre trends and box office success on 1,000+ movies using Excel and presented insights with PowerPoint.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card p-3">
+          <h5>Walmart Sales Analysis</h5>
+          <p>Studied seasonal trends and category performance to recommend business strategies using Excel.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card p-3">
+          <h5>Hiring Funnel Dashboard</h5>
+          <p>Developed interactive dashboards to visualize candidate sourcing and selection metrics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+<section id="skills" class="animate__animated animate__fadeInDown">
+  <h2><b>Skills</b></h2>
+  <div class="row">
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div class="card text-center p-3">
+        <i class="fab fa-python fa-2x mb-2" style="color: #ffc107;"></i>
+        <h6>Python</h6>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div class="card text-center p-3">
+        <i class="fas fa-table fa-2x mb-2" style="color: #ffc107;"></i>
+        <h6>Excel</h6>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div class="card text-center p-3">
+        <i class="fas fa-chart-bar fa-2x mb-2" style="color: #ffc107;"></i>
+        <h6>Tableau</h6>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div class="card text-center p-3">
+        <i class="fas fa-chart-pie fa-2x mb-2" style="color: #ffc107;"></i>
+        <h6>Power BI</h6>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div class="card text-center p-3">
+        <span style="font-size: 2rem; color: #ffc107;">R</span>
+        <h6>R Programming</h6>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div class="card text-center p-3">
+        <span style="font-size: 2rem; color: #ffc107;">𝝂</span>
+        <h6>Numpy</h6>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div class="card text-center p-3">
+        <span style="font-size: 2rem; color: #ffc107;">𝑷</span>
+        <h6>Pandas</h6>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div class="card text-center p-3">
+        <i class="fas fa-file-excel fa-2x mb-2" style="color: #ffc107;"></i>
+        <h6>Google Sheets</h6>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div class="card text-center p-3">
+        <i class="fas fa-file-powerpoint fa-2x mb-2" style="color: #ffc107;"></i>
+        <h6>PowerPoint</h6>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="animate__animated animate__fadeInDown">
+    <h2><b>Get In Touch</b></h2>
+    <form id="contactForm">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          placeholder="name@example.com"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea
+          class="form-control"
+          id="message"
+          name="message"
+          rows="4"
+          placeholder="Your message..."
+          required
+        ></textarea>
+      </div>
+      <button type="submit" class="btn btn-warning">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Chinthan K M | Let’s Connect Like Anime Allies</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Activate nav link based on scroll
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 70;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // Contact form submission (no backend)
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for reaching out! I will get back to you soon.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
